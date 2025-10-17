@@ -108,14 +108,32 @@ function getCoords() {
   }
 }
 
-// Carga Script de Google Maps y lo agrega al inicializarse el DOM
-function loadGoogleMaps() {
-  // Clave Public para cargar Mapa solamente (restringida)...
-  const script = document.createElement('script');
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${PUB_KEY}&libraries=marker&callback=initMap`;
-  script.async = true;
-  script.defer = true;
-  document.head.appendChild(script);
+// Carga el script de Google Maps dinámicamente usando la clave pública desde Netlify
+async function loadGoogleMaps() {
+  try {
+    // Fetch de la clave pública a (Netlify Function)
+    const response = await fetch('/.netlify/functions/getMap');
+    const data = await response.json();
+
+    if (!data.key) {
+      throw new Error('No se recibió la clave pública desde Netlify.');
+    }
+
+    // Guarda la clave en variable local PUB_KEY
+    const PUB_KEY = data.key;
+
+    // Crea scripts de Google Maps
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${PUB_KEY}&libraries=marker&callback=initMap`;
+    script.async = true;
+    script.defer = true;
+
+    // Agrega el script al <head> cuando el DOM se inicializa
+    document.head.appendChild(script);
+  } catch (error) {
+    // Manejo de errores
+    console.error('Error al cargar Google Maps:', error);
+  }
 }
 
 // Listener para Consultar Ubicación
