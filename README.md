@@ -33,5 +33,8 @@ https://unique-panda-1f9e65.netlify.app/
    _GOOGLE_MAPS_PUB_KEY=tu_clave_publica_\
    _GOOGLE_MAPS_PRIVATE_KEY=tu_clave_privada_
 
-4. Correr servidor local Netlify / Run Netlify local server\
+4. Instalar Netlify CLI / Install Netlify CLI\
+   _npm install -g netlify-cli_
+
+5. Correr servidor local Netlify / Run Netlify local server\
    _netlify dev_
