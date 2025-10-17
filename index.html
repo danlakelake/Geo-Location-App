@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="mainTitle">App Geolocalización</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Tailwind v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+    <!-- Selector de idioma -->
+    <div class="mb-8 space-x-2">
+      <button
+        id="btnToggleLang"
+        data-i18n="toggleBtn"
+        class="bg-sky-900 text-stone-50 font-semibold py-1 px-3 rounded shadow-md transition cursor-pointer"
+      >
+        ES
+      </button>
+    </div>
+    <!-- Title -->
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-stone-50 text-center" data-i18n="title">Consulta Tu Ubicación Actual</h2>
+
+    <button
+      id="btnGetLocation"
+      type="button"
+      class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded shadow-md cursor-pointer mb-4"
+      data-i18n="btnShowLocation"
+    >
+      Mostrar mi ubicación
+    </button>
+
+    <!-- Mapa -->
+    <div id="locationInfo" class="w-full max-w-xl sm:max-w-2xl md:max-w-4xl mb-4"></div>
+    <div id="map" class="w-full max-w-xl sm:max-w-2xl md:max-w-4xl h-64 sm:h-80 md:h-96 rounded-2xl shadow-lg"></div>
+    <!-- Scripts -->
+    <script type="module" src="scripts/app.js"></script>
+  </body>
+</html>

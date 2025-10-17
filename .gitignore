@@ -1,0 +1,8 @@
+# Node modules (dependencias)
+node_modules/
+# Logs de npm
+npm-debug.log*
+# Local Netlify folder
+.netlify/
+# Environment variables
+.env
