@@ -15,7 +15,7 @@ exports.handler = async function (event) {
     // Toma la API KEY que se guardó como variable de entorno en Netlify
     const API_KEY = process.env.GOOGLE_MAPS_PRIVATE_KEY;
 
-    // Valida que exista la API KEY
+    // Valida que exista la API_KEY
     if (!API_KEY) {
       return {
         statusCode: 500, // Error de Servidor

@@ -4,7 +4,7 @@ exports.handler = async function () {
     // Toma la PUB_KEY que se guardó como variable de entorno en Netlify
     const PUB_KEY = process.env.GOOGLE_MAPS_PUB_KEY;
 
-    // Si no se encuentra
+    // Valida que exista la PUB_KEY
     if (!PUB_KEY) {
       return {
         statusCode: 500, // Error del Servidor
