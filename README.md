@@ -26,8 +26,8 @@ https://unique-panda-1f9e65.netlify.app/
    git clone <URL_DEL_REPO>
    cd <NOMBRE_DEL_REPO>
    ```
-2. Instalar NPM / Install NPM
-   npm install
+2. Instalar NPM / Install NPM\
+   _npm install_
 
 3. Crear archivo .env / Create .env file\
    _GOOGLE_MAPS_PUB_KEY=tu_clave_publica_\
