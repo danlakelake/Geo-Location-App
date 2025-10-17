@@ -1,4 +1,4 @@
-// Función que Netlify ejecuta cuando se hace un request a /functions/getPublicKey.js
+// Función que Netlify ejecuta cuando se hace un request a /functions/getMap.js
 exports.handler = async function () {
   try {
     // Toma la PUB_KEY que se guardó como variable de entorno en Netlify
