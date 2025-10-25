@@ -7,7 +7,6 @@ body {
   overflow-x: hidden;
 }
 
-#btnGetLocation {
-  position: relative;
-  z-index: 99999;
+#map {
+  pointer-events: none;
 }
