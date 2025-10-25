@@ -6,13 +6,3 @@ body {
   padding: 2rem 1rem;
   overflow-x: hidden;
 }
-
-#btnGetLocation {
-  position: relative;
-  z-index: 999999;
-  pointer-events: auto;
-}
-
-#map {
-  pointer-events: none !important;
-}
