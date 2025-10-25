@@ -6,3 +6,7 @@ body {
   padding: 2rem 1rem;
   overflow-x: hidden;
 }
+
+#btnGetLocation {
+  z-index: 99999;
+}
