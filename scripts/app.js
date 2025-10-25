@@ -137,7 +137,10 @@ async function loadGoogleMaps() {
 }
 
 // Listener para Consultar Ubicación
-btnGetLocation.addEventListener('click', console.log('diste click'), getCoords);
+btnGetLocation.addEventListener('click', () => {
+  console.log('diste click');
+  getCoords();
+});
 // Listener para Cambio de Idioma
 btnToggleLang.addEventListener('click', changeLanguage);
 
